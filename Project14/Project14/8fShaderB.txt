@@ -1,0 +1,18 @@
+#version 420 core
+out vec4 FragColor;
+//layout(depth_less) out float gl_FragDepth;
+
+in VS_OUT//�ӿڿ飻
+{
+	vec2 TexCoords;
+}fs_in;
+
+
+uniform sampler2D frontTexture;
+uniform sampler2D backTexture;
+
+void main()
+{
+	FragColor=vec4(0.0,0.0,1.0,1.0);
+		
+}

@@ -1,0 +1,48 @@
+#version 420 core
+out vec4 FragColor;
+
+in vec2 TexCoords;
+
+uniform sampler2D texture_diffuse1;
+
+void main()
+{
+	FragColor=texture(texture_diffuse1,TexCoords);
+}
+
+
+
+/*out vec4 FragColor;
+in vec3 fColor;
+void main()
+{
+	FragColor=vec4(fColor,1.0);
+}//*/
+
+/*out vec4 FragColor;
+//layout(depth_less) out float gl_FragDepth;
+
+in VS_OUT//接口块；
+{
+	vec2 TexCoords;
+}fs_in;
+
+
+uniform sampler2D frontTexture;
+uniform sampler2D backTexture;
+
+void main()
+{
+	FragColor=vec4(0.4,0.6,0.7,1.0);
+	//gl_FragDepth=gl_FragCoord.z-0.5;//调整片段深度值；尚有问题；
+	/*if(gl_FragCoord.x<400)//片段窗口坐标x值不同输出不同的颜色；
+		FragColor=vec4(0.7,0.3,0.2,1.0);
+	else
+		FragColor=vec4(0.3,0.1,0.7,1.0);//*/
+
+	/*if(gl_FrontFacing)//根据是否是表面输出不同的纹理；
+		FragColor=texture(frontTexture,fs_in.TexCoords);
+	else
+		FragColor=texture(backTexture,fs_in.TexCoords);//*//*
+	
+}//*/
